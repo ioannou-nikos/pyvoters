@@ -23,5 +23,19 @@ col_names = ['ENOTHTA','EKL_PER','DIMOS','EKLOGI','FASI','METRHSH','ARITHMOS','I
 #Read the data into the data frame
 df = pd.read_excel(loc,'data',header=0,skiprows=0,index_col=None,parse_cols='A:H',na_values=['NA'])
 
+#print df.index #Print the index of the dataframe
 
-print df
+#print df.columns #Print the column names
+
+#print df.values #Print the values
+
+#print df.describe() #Show basic descriptive statistics
+
+#print df.sort_index(axis=1, ascending=False) #Sort by axis
+
+#print df['ENOTHTA'] #Select a single column
+#print df[0:10] #Slice the rows
+#print df.loc[0:10,['ENOTHTA','DIMOS']]
+#print df.iloc[0:2,[1,3]]
+sample = df.iloc[0:,[0,4,5,6]]
+print sample.describe()
