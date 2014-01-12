@@ -18,10 +18,10 @@ loc = "data.xls"
 #Specify the sheet names
 names = ['data']
 
-col_names = ['ENOTHTA','DIMOS','EKLOGI','FASI','METRHSH','ARITHMOS']
+col_names = ['ENOTHTA','EKL_PER','DIMOS','EKLOGI','FASI','METRHSH','ARITHMOS','IS_TOTAL']
 
 #Read the data into the data frame
-df = pd.read_excel(loc,'data',header=0,skiprows=0,index_col=None,parse_cols='A:F',na_values=['NA'])
+df = pd.read_excel(loc,'data',header=0,skiprows=0,index_col=None,parse_cols='A:H',na_values=['NA'])
 
 
 print df
